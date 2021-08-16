@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Modak&dispaly=swap');
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: #ff0000;
+    background-size: cover;
+
+}
+.container{
+    max-width: 100%;
+}
+.gameApp{
+    height:100%;
+    width: 100%;
+    background-color: #009688;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.col-3{
+    width:200px;
+}
+.userscore ul{
+    list-style: none;
+}
+.userscore h3{
+    color:yellow !important;
+    font-weight: bold;
+}
+.userscore h5{
+    color:white !important;
+    font-weight: bold;
+    text-align: center;
+}
+.userscore .gameinfo{
+    box-shadow: teal;
+}
+.userscore span{
+    font-weight: bold;
+    padding-right: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    background-color: white;
+    font-weight: bold;
+}
+.userscore li{
+    padding-bottom:20px ;
+}
+.gameDiv{
+    height:600px;
+    width: 1000px;
+    box-shadow: 0px 0px 20px #000000;
+    background-color: #9696967a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.player{
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(0 0 5px #00000080);
+    -webkit-filter:drop-shadow(0 0 5px #000000a6 ) ;
+    position:relative;
+    transition: top 10ms;
+    transition: left 80ms;
+    z-index: 2; 
+
+}
+
+.gameDiv h2{
+    position: absolute;
+    color: white;
+    font-size: 'modak' , cursive;
+    left: 20px;
+    top:20px;
+}
+.bullet{
+    height: 15px;
+    width: 15px;
+
+    position: absolute;
+    background-color: red;
+    box-shadow: 0px 0px 6px 1px black;
+    transform: translate(-50%,-50%);
+}
+.bubble{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    transform: translate(-50%,-50%);
+    color:red;
+}
+div.bubbleReached{
+animation-name:bubble;
+animation: bubble 1s;
+}
+@keyframes bubble {
+    0%{
+        box-shadow: 0px 0px 20px #00000080;
+    }
+    25%{
+        box-shadow: 0px 0px 50px #ff0101;
+    }
+    50%{
+        box-shadow: 0px 0px 20px #00000080;
+    }
+    75%{
+        box-shadow: 0px 0px 50px #ff0000;
+    }
+    100%{
+        box-shadow: 0px 0px 20px #00000080;
+    }
+    
+}
+
+
+
+
+
+

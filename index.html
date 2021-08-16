@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Game by JS and Vuejs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="shortcut icon"  href="./assets/player1.svg" type="images/x-icon">
+
+
+</head>
+<body>
+  <div class="gameApp container">
+    <div class="row">
+        <div class="col-3 userscore">
+            <div class="gameinfo">
+                <h5>Bubble Game</h5>
+                <h6>Design By:</h6>
+                <p>Hussien A. Al-Qupati</p>
+            </div> 
+            <ul>
+                <li>
+                    <h3>Level</h3>
+                    <span> 1</span>
+                </li>
+                <li>
+                    <h3>Score</h3>
+                    <span>{{score}}</span>
+                </li>
+              
+            </ul>
+        </div>
+        <div class="gameDiv" :class="{bubbleReached: bubbleReached}" class="col-9">
+            <h2>Player :{{score}}</h2>
+            <img src="./assets/Season_3.png" :style="player"   alt="player1svg" class="player" id="player1">
+    
+            <template v-for="bullet in bullets">
+                <div class="bullet" :style="[{left:bullet.x + 'px'},{top:bullet.y+'px'}]">
+                </div>
+            </template>
+    
+            <template v-for="(bubble,color) in bubbles">
+                <img :style="[{left:bubble.x +'px'},
+                {top:bubble.y +'px'}]"
+                :src="`./assets/bubble_${bubble.color}.png`" alt="bubblesvg" class="bubble">            
+            </template>
+        </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
